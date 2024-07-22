@@ -1,7 +1,7 @@
 use std::f64::consts::PI;
 
 use ndarray::Array;
-use re_space_view_tensor_vis::types::archetypes::TensorViz;
+use re_space_view_tensorviz::types::archetypes::TensorViz;
 use re_types::archetypes::Tensor;
 use re_viewer::external::{re_log, re_memory};
 
@@ -90,7 +90,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             );
             app.add_receiver(rx);
 
-            app.add_space_view_class::<re_space_view_tensor_vis::TVSpaceView>()
+            app.add_space_view_class::<re_space_view_tensorviz::TVSpaceView>()
                 .unwrap();
 
             Box::new(app)
